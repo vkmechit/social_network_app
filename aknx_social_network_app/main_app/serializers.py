@@ -62,35 +62,6 @@ class SocialRequestSerializer(serializers.Serializer):
 
         return FriendRequest.objects.create(**validated_data)
     
-# class SocialRequestSerilizer(serializers.Serializer):
-#     receiver = serializers.PrimaryKeyRelatedField(
-#         queryset=User.objects.all(),
-#         error_messages={'does_not_exist': 'You can not send request to this user as it does not exist.'}
-#     )
-
-#     class Meta:
-#         model = FriendRequest
-#         fields = ['sender', 'receiver', 'status', 'created_at']
-
-#     def validate(self, data):
-#         sender = data.get('sender')
-#         receiver = data.get('receiver')
-
-#         # Check if user sending request to himself
-#         if sender == receiver:
-#             raise serializers.ValidationError({"message": "You cannot send a friend request to yourself."})
-        
-#         # Check if a connection already exists between these users
-#         existing_request = FriendRequest.objects.filter(
-#             sender=sender,
-#             receiver=receiver,
-#         ).exists()
-
-#         if existing_request:
-#             raise ValidationError({"message": "A friend request already exists, or you are already friends."})
-
-#         return data
-    
 class FriendsSerializer(serializers.ModelSerializer):
     """
     Serializer for friend request objects, providing user details.

@@ -18,9 +18,6 @@ env = environ.Env(
     DEBUG=(bool, False),
     SECRET_KEY=(str, ''),
     DB_ENGINE=(str, ''),
-    # DB_NAME=(str, ''),
-    # DB_PASSWORD=(str, ''),
-    # DB_USER=(str, ''),
     ALLOWED_HOSTS=(list, '*'),
 )
 
@@ -97,13 +94,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-# 'default': {
-#         'ENGINE': env('DB_ENGINE'),
-#         'NAME': env('DB_NAME'),
-#         'PASSWORD':  env('DB_PASSWORD'),
-#         'USER': env('DB_USER'),
-#         'HOST': env('HOST')
-#     }
 
 
 # Password validation
@@ -161,35 +151,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
-    # 'DEFAULT_THROTTLE_CLASSES': [
-    #     'rest_framework.throttling.ScopedRateThrottle',
-    # ],
-    # 'DEFAULT_THROTTLE_RATES': {
-    #     'friend_request': '3/minute',  
-    # }
-    # 'DEFAULT_THROTTLE_CLASSES': [
-    #     'rest_framework.throttling.AnonRateThrottle',
-    #     'rest_framework.throttling.UserRateThrottle',
-    #     'main_app.throttles.FriendRequestRateThrottle',  # Ensure your throttle is included
-    # ],
-    # 'DEFAULT_THROTTLE_RATES': {
-    #     'anon': '10/minute',  # Example for anonymous users
-    #     'user': '100/hour',   # Example for authenticated users
-    # }
-    # 'DEFAULT_THROTTLE_CLASSES': [
-    #     'rest_framework.throttling.UserRateThrottle',
-    # ],
-    # 'DEFAULT_THROTTLE_RATES': {
-    #     'friend_request': '3/min',  
-    # },
 }
-
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-#         'LOCATION': 'unique-snowflake',
-#     }
-# }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

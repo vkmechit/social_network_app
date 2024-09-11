@@ -26,9 +26,7 @@ class SocialViewSet(viewsets.ModelViewSet):
         detail=False, 
         permission_classes=[IsAuthenticated, ], 
         serializer_class=SocialRequestSerializer,
-        # throttle_scope = 'friend_request',
         throttle_classes=[FriendRequestRateThrottle, ]
-        # throttle_classes=[FriendRequestRateThrottle,]
         )
     def send_request(self, request):
         """
