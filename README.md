@@ -67,8 +67,8 @@ This will create and start the necessary services.
 ### API Endpoints
 
 The project provides several API endpoints:
-# For detailed API structure please refer to the postman collection file named ```Accuknox.postman_collection.json```
-# Please refer to https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/ to import the collection
+#### For detailed API structure please refer to the postman collection file named ```Accuknox.postman_collection.json```
+#### Please refer to https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/ to import the collection
 
 1. Send a friend request:
    ```
@@ -95,9 +95,4 @@ The project provides several API endpoints:
 - Make sure to configure your firewall to allow connections to the specified ports.
 - For production environments, consider setting up HTTPS and configuring proper security measures.
 - Regularly backup your database to prevent data loss.
-```
 
-
-Certainly! I'll provide you with detailed information about each API endpoint, including sample calls. Here's how you can structure this information in your README.md file:
-
-```
